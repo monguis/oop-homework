@@ -3,6 +3,7 @@ Employee = require("./lib/employee");
 Manager = require("./lib/Manager");
 Intern = require("./lib/Intern");
 Engineer = require("./lib/engineer");
+html = require("./generateHTML");
 
 const team = [];
 
@@ -71,6 +72,7 @@ async function createTeam() {
 
     } while (await lastQuestion());
     console.log(team[0].constructor.name);
+    html.generateHTML(team);
 }
 
 
