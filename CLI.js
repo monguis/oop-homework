@@ -40,7 +40,8 @@ async function createTeam() {
                 ]
             }
         ])
-        console.log(data.role)
+
+
         switch (data.role) {
             case "Manager":
                 const OfficeNumber = await inquirer.prompt({
@@ -69,7 +70,7 @@ async function createTeam() {
         }
 
     } while (await lastQuestion());
-    console.log(team);
+    console.log(team[0].constructor.name);
 }
 
 
