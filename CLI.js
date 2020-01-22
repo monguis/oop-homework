@@ -66,7 +66,7 @@ async function createTeam() {
                     name: "github",
                     message: "What is this engineer's github username?"
                 }).then(({ github }) => github);
-                await team.push(new Manager(data.name,data.id,data.email,github));
+                await team.push(new Engineer(data.name,data.id,data.email,github));
                 break;
         }
 
