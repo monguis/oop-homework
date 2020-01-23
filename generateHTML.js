@@ -51,10 +51,10 @@ generateFile = (team) => {
             lastLiStr = "School: " + member.getSchool();
         }
 
-
+//style="max-width: 18rem;"
 
         finalText += `<div class="col-lg-4">
-    <div class="card text-white shadow rounded" style="max-width: 18rem;">
+    <div class="card text-white shadow rounded mt-2">
         <div class="card-header  bg-primary ">
             <h2>${member.getName()}</h2>
             <h2>${icon}${member.constructor.name}</h2>
@@ -81,7 +81,7 @@ generateFile = (team) => {
 
 </html>`;
 
-    fs.writeFileSync("test.html", finalText, (err) => {
+    fs.writeFileSync("generated.html", finalText, (err) => {
         if (err) throw err;
 
         console.log("success!!")
